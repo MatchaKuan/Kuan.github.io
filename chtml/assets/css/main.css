@@ -1,0 +1,212 @@
+
+
+header
+	{background-color: red;}
+nav
+	{background-color: purple; width: 50%;}
+section
+	{background: rgb(0, 0, 0); padding: 200px; margin: 20px;}
+footer
+	{background-color: orange; font-size: 10px;}
+header, nav, section, article, footer
+	{color: white; font-size: 26px;}
+
+a {color:#ffffff;}
+
+/* 列表樣式 */
+
+ul {
+	list-style-type: none;
+	display: table;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover, .dropbtn {
+    background-color: rgb(252, 0, 0);
+}
+
+/* <div> - 需要定位下拉内容 */
+.dropdown {
+    display: inline-block;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {
+	background-color: #e7040481
+}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ol {
+	list-style: decimal;
+	margin: 0 0 2em 0;
+	padding-left: 1.25em;
+}
+
+ol li {
+	padding-left: 0.25em;
+}
+
+/* Table */
+
+.table-wrapper {
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+}
+
+table {
+	margin: 0 0 2em 0;
+	width: 100%;
+	table-layout: fixed;
+	word-break: break-all;
+}
+
+	table tbody tr {
+		border: solid 1px rgba(212, 212, 255, 0.1);
+		border-left: 0;
+		border-right: 0;
+	}
+
+		table tbody tr:nth-child(2n + 1) {
+			background-color: rgba(212, 212, 255, 0.035);
+		}
+
+	table td {
+		padding: 0.75em 0.75em;
+	}
+
+/* th 文字顏色 */
+	table th {
+		color: #ffffff;
+		font-size: 0.9em;
+		font-weight: 600;
+		padding: 0 0.75em 0.75em 0.75em;
+		text-align: left;
+	}
+
+	table thead {
+		border-bottom: solid 2px rgba(212, 212, 255, 0.1);
+	}
+
+	table tfoot {
+		border-top: solid 2px rgba(212, 212, 255, 0.1);
+	}
+
+	table.alt {
+		border-collapse: separate;
+	}
+		/* 表格內容顏色 */
+		table.alt tbody tr td {
+			border: solid 1px rgba(30, 175, 17, 0.993);
+			border-left-width: 0;
+			border-top-width: 0;
+		}
+
+			table.alt tbody tr td:first-child {
+				border-left-width: 1px;
+			}
+
+		table.alt tbody tr:first-child td {
+			border-top-width: 1px;
+		}
+
+		table.alt thead {
+			border-bottom: 0;
+		}
+
+		table.alt tfoot {
+			border-top: 0;
+		}
+
+/* 圖片	*/	
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+code {
+    background: rgb(75, 76, 55);
+    font-family: "Courier New", monospace;
+    font-size: 0.7em;
+    margin: 0 0.25em;
+    padding: 0.25em 0.65em;
+}
+
+pre {
+    -webkit-overflow-scrolling: touch;
+    font-family: "Courier New", monospace;
+    font-size: 0.7em;
+    margin: 0 0 2em 0;
+}
+
+    pre code {
+        display: block;
+        line-height: 1.75;
+        height: 300px;
+        padding: 1em 1.5em;
+        overflow-x: auto;
+    }
+
+#MyWeb {
+    position: fixed; /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 90%; /*設置垂直位置*/
+    right: -50px; /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+    background: #FF8800; /*背景顏色*/
+    padding: 10px 20px;
+    border-radius: 10px; /*圓角*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+    #MyWeb:hover { /*當滑鼠移至此區塊時，伸縮區塊*/
+        right: 10px;
+    }
+
+    #MyWeb #title {
+        padding-right: 5px; /*讓標題與連結中間有空隙*/
+	}
+	
+img#dice_1, img#dice_2, img#dice_3, img#dice_4, img#dice_5, img#dice_6, img#dice_7, img#dice_8 {
+        width: auto;
+        height: auto;
+        cursor: pointer;
+		position: relative;
+		float: left;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>暫存原始碼</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="shortcut icon" href="images/logo.ico" />
+</head>
+<body>
+	<h1> 原始碼複製區 </h1>
+
+    <pre>
+        {ALL:
+            loadLibrary("com.flowring.PS.Client.Form");
+            loadLibrary("com.flowring.PS.util.String");
+            
+            var nowTsk = Form.getCurrentTask();
+            var InsID = Form.getArtInstanceID();
+            var processId = "";
+            if(nowTsk != null){
+                processId = nowTsk.getProcessID();
+            }
+            
+            var PID_Apply = "PRO00071559580260635";//申請人提出
+            var PID_ManagerSign = "PRO00081559580260635";//單位主管審核
+            var PID_Account = "PRO00091559580260652";//掛帳部門審核
+            var PID_Undertake = "PRO00101559580260652";//承辦審核
+        
+            //申請人提出
+            if(PID_Apply.equals(processId)){
+                if("false".equals(Form.getValue("chkCancelBox"))){
+                    Apply_ok();//申請防呆
+                }
+            }
+        
+            //===============================================================================
+            
+            //申請防呆
+            function Apply_ok(){
+                if("".equals(Form.getValue("txtUNo").trim())){
+                    Form.addDataInvalidMsg("請填寫工號");
+                }
+                if("私車公用申請".equals(Form.getValue("txtApplyReason").trim)){
+                    Form.addDataInvalidMsg("請填寫原因");
+                }
+                if("請選擇".equals(Form.getValue("calStartDate").trim())){
+                    Form.addDataInvalidMsg("請選擇開始日期");
+                }
+                if("請選擇".equals(Form.getValue("cboStartTime").trim())){
+                    Form.addDataInvalidMsg("請選擇開始時間");
+                }
+                if("".equals(Form.getValue("txtDeptAccount").trim())){
+                    Form.addDataInvalidMsg("請填寫掛帳部門");
+                }
+                if("".equals(Form.getValue("txtCarNo").trim())){
+                    Form.addDataInvalidMsg("請填寫車種");
+                }
+                //檔案上傳
+                if("".equals(Form.getValue("attUpload").trim())){
+                    Form.addDataInvalidMsg("請上傳檔案");
+                }
+            }
+        }
+    <pre>
+</body>
+</html>
